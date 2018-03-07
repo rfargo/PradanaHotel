@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<link rel="stylesheet" type="text/css" href="pagecss.css">
+  <script type="text/javascript" src="validation.js"></script>
+	<title>Book Now</title>
+</head>
+<body>
+	<div id="logo">
+		<img src="logo2.png">
+	</div>
+	<nav>
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="facility.html">Facility</a></li>
+			<li><a href="book.html">Book Room</a></li>
+		</ul>
+	</nav>
+<hr/>
+<form name="tables">
+<table id="forms">
+  <tr>
+    <th colspan="2">BOOK ROOM</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>
+    	<input type="Text" name="Name" onblur="validateName()" id="inputName">
+      <p id="sign1">Fill Your Name</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>
+      <input type="email" name="Email" onblur="validateEmail()" id="inputEmail">
+       <p id="sign2">Fill Your Email</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><input type="Text" name="Phone" onblur="validatePhone()" id="inputPhone">
+    <p id="sign3">Fill Your Phone Number</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Stay in Date</td>
+    <td><input type="date" name="StayDate" onblur="validateStay()" id="inputStay">
+    <p id="sign4">Fill Your Stay Date</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Length of Stay (Day/s)</td>
+    <td><input type="Text" name="LengthStay" onblur="validateLength()" id="inputLength">
+    <p id="sign5">Fill Your Length of Stay</p></td>
+  </tr>
+  <tr>
+    <td>Room Type</td>
+    <td>
+   <select name="room-type" onblur="validateRoom()" id="inputRoom">
+    <option value="none">-</option>
+    <option value="deluxe">Deluxe Room – $ 274</option>
+    <option value="deluxepool">Deluxe Pool Villa – $438</option>
+    <option value="onebed">1 Bedroom Pool Villa – $525</option>
+    <option value="twobed">2 Bedroom Pool Villa - $635</option>
+  </select>
+   	<p id="sign6">Fill your room</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Additional Charge</td>
+    <td>
+    	<input type="checkbox" name="add-charge" value="extra-bed">Extra Bed - $80<br>
+		<input type="checkbox" name="add-charge" value="airport-shuttle">Airport Shuttle -$40<br>
+		<input type="checkbox" name="add-charge" value="ubud-tour">Ubud Tour - $100<br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <a id="buttons" href="alldone.html" onclick="checkForm()">
+        <input type="button" value="Submit"/>
+      </a>
+    </td>
+       </tr>
+</table>
+</form>
+
+<script>
+  document.getElementById("buttons").addEventListener("click", function(event){
+  var inputname = document.getElementById("inputName").value;
+  var inputemail = document.getElementById("inputEmail").value;
+  var inputphone = document.getElementById("inputPhone").value;
+  var inputstay = document.getElementById("inputStay").value;
+  var inputlength = document.getElementById("inputLength").value;
+  var inputroom = document.getElementById("inputRoom").value;
+
+    if(inputname !== '' && inputemail !== '' && inputphone !== '' 
+        && inputstay !== '' && inputlength !== '' && inputroom !== 'none'){
+      alert("Yay, All Filled");
+    }else{
+      event.preventDefault();  
+    }
+});
+</script>
+
+<footer>© 2017 Pramana Experience - All Rights Reserved.</footer>
+
+</body>
+</html>

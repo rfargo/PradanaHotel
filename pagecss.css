@@ -1,0 +1,79 @@
+/*all and nav*/
+*{
+	font-family: sans-serif;
+}
+
+body{
+	background-color: black;
+	padding: 0 10vw;
+}
+
+#logo, nav, table{
+  display: flex;
+  justify-content: center;
+}
+nav ul li{
+	display: inline;
+	color: white;
+	list-style-type: none;
+	margin: 0 100px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+/*part 1*/
+p{
+	color: white;
+	text-align: justify;
+}
+
+.facility h4, .facility h2, .facility ul li{
+	color: white;
+	margin: 0;
+}
+
+/*Page Book*/
+#sign1, #sign2, #sign3, #sign4, #sign5, #sign6{
+	display: none;
+	margin:0;
+	padding:0;
+}
+
+table, tr ,th, td{
+	color: white;
+}
+
+table, tr, td, #forms th{
+	margin: 0;
+}
+
+table{
+	margin-top: 30px;
+	border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid white;
+}
+
+#forms th, td{
+	padding: 15px;
+}
+
+#alldone h1, #alldone h2{
+	color: white;
+	text-align: center;
+}
+
+
+/*footer*/
+footer{
+	padding-top: 30px;
+	color: white;
+	padding-left: 350px;
+}
